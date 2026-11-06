@@ -63,15 +63,15 @@
     <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl"></div>
         <div class="absolute top-1/3 -left-40 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 right-1/4 w-[30rem] h-[30rem] bg-blue-100/50 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-8 right-1/4 w-[32rem] h-[32rem] bg-blue-100/50 rounded-full blur-3xl"></div>
     </div>
 
-    <!-- ヘッダー / ナビゲーションバー -->
+    <!-- ヘッダー / ナビゲーションバー (8の倍数: py-4=16px, px-6=24px, gap-8=32px) -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-white/80 backdrop-blur-md border-b border-blue-100/60 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
             <!-- ロゴ -->
             <a href="#hero" class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2 group">
-                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-sky-400 text-white flex items-center justify-center font-bold shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-sky-400 text-white flex items-center justify-center font-bold shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
                     <i class="fa-solid fa-code text-sm"></i>
                 </span>
                 <span class="bg-gradient-to-r from-brand-700 to-sky-600 bg-clip-text text-transparent font-black">
@@ -85,8 +85,8 @@
                 <a href="#skills" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Skills</a>
                 <a href="#projects" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Projects</a>
                 <a href="#experience" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Experience</a>
-                <a href="#contact" class="px-5 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-full shadow-md shadow-brand-500/25 transition-all hover:shadow-lg hover:shadow-brand-500/30 hover:-translate-y-0.5">
-                    Contact <i class="fa-solid fa-paper-plane ml-1 text-xs"></i>
+                <a href="#contact" class="px-6 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-full shadow-md shadow-brand-500/25 transition-all hover:shadow-lg hover:shadow-brand-500/30 hover:-translate-y-0.5">
+                    Contact <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
                 </a>
             </nav>
 
@@ -99,25 +99,25 @@
         <!-- モバイルドロワーメニュー -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-blue-100 px-6 py-6 shadow-xl transition-all">
             <div class="flex flex-col gap-4">
-                <a href="#about" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-1">About</a>
-                <a href="#skills" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-1">Skills</a>
-                <a href="#projects" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-1">Projects</a>
-                <a href="#experience" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-1">Experience</a>
-                <a href="#contact" class="mobile-link text-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-full shadow-md shadow-brand-500/25 transition-all">
+                <a href="#about" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-2">About</a>
+                <a href="#skills" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-2">Skills</a>
+                <a href="#projects" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-2">Projects</a>
+                <a href="#experience" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-600 py-2">Experience</a>
+                <a href="#contact" class="mobile-link text-center px-6 py-4 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-full shadow-md shadow-brand-500/25 transition-all">
                     Contact
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- ヒーローセクション -->
-    <section id="hero" class="min-h-screen pt-32 pb-20 flex items-center relative">
+    <!-- ヒーローセクション (8の倍数: pt-32=128px, pb-24=96px, gap-12=48px) -->
+    <section id="hero" class="min-h-screen pt-32 pb-24 flex items-center relative">
         <div class="max-w-6xl mx-auto px-6 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- テキストエリア -->
                 <div class="lg:col-span-7 text-center lg:text-left" data-aos="fade-up" data-aos-duration="800">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-brand-200 text-brand-700 font-medium text-xs md:text-sm mb-6 shadow-xs">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-brand-200 text-brand-700 font-medium text-xs md:text-sm mb-6 shadow-xs">
                         <span class="relative flex h-2 w-2">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
@@ -135,19 +135,19 @@
                         私は、<span id="typed" class="font-bold text-brand-600"></span> を得意としています。
                     </p>
 
-                    <!-- CTAボタン群 -->
+                    <!-- CTAボタン群 (px-8 py-4 = 32px, 16px) -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <a href="#projects" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white rounded-full font-semibold shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                        <a href="#projects" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-full font-semibold shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2">
                             実績を見る
                             <i class="fa-solid fa-arrow-down text-sm"></i>
                         </a>
-                        <a href="#contact" class="px-8 py-3.5 bg-white hover:bg-brand-50/60 text-brand-700 border-2 border-brand-200 rounded-full font-semibold shadow-sm hover:shadow hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                        <a href="#contact" class="px-8 py-4 bg-white hover:bg-brand-50/60 text-brand-700 border-2 border-brand-200 rounded-full font-semibold shadow-sm hover:shadow hover:-translate-y-0.5 transition-all flex items-center gap-2">
                             お問い合わせ
                             <i class="fa-regular fa-envelope text-sm"></i>
                         </a>
                     </div>
 
-                    <!-- SNS / リンク -->
+                    <!-- SNS / リンク (mt-10=40px, gap-4=16px) -->
                     <div class="mt-10 flex items-center justify-center lg:justify-start gap-4 text-slate-400">
                         <span class="text-xs uppercase tracking-wider font-semibold text-slate-400">Follow Me:</span>
                         <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-brand-600 hover:border-brand-300 hover:shadow-md transition-all">
@@ -166,12 +166,12 @@
                 <div class="lg:col-span-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <div class="relative mx-auto max-w-sm lg:max-w-none">
                         <!-- 装飾サークル -->
-                        <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-500 to-sky-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brand-500 to-sky-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
 
-                        <!-- メインビジュアルカード -->
+                        <!-- メインビジュアルカード (p-8=32px) -->
                         <div class="relative bg-white rounded-3xl p-8 border border-blue-100 shadow-2xl">
                             <!-- プロフィールアバター風装飾 -->
-                            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-brand-600 via-blue-500 to-sky-400 p-1 mx-auto shadow-lg shadow-brand-500/25 mb-6">
+                            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-brand-600 via-blue-500 to-sky-400 p-2 mx-auto shadow-lg shadow-brand-500/25 mb-6">
                                 <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center text-brand-600 text-4xl">
                                     <i class="fa-solid fa-user-astronaut"></i>
                                 </div>
@@ -182,20 +182,20 @@
                                 <p class="text-sm font-medium text-brand-600">Frontend Engineer & UI Designer</p>
                             </div>
 
-                            <!-- ハイライト指標 -->
+                            <!-- ハイライト指標 (p-4=16px, gap-4=16px, py-4=16px, my-4=16px) -->
                             <div class="grid grid-cols-2 gap-4 py-4 border-y border-slate-100 my-4 text-center">
-                                <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100/50">
+                                <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100/50">
                                     <span class="block text-2xl font-black text-brand-700">3+</span>
                                     <span class="text-xs text-slate-500 font-medium">Years Experience</span>
                                 </div>
-                                <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100/50">
+                                <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100/50">
                                     <span class="block text-2xl font-black text-brand-700">20+</span>
                                     <span class="text-xs text-slate-500 font-medium">Completed Projects</span>
                                 </div>
                             </div>
 
-                            <!-- 特徴リスト -->
-                            <div class="space-y-2.5 text-xs text-slate-600 font-medium">
+                            <!-- 特徴リスト (space-y-2=8px, gap-2=8px) -->
+                            <div class="space-y-2 text-xs text-slate-600 font-medium">
                                 <div class="flex items-center gap-2">
                                     <i class="fa-solid fa-circle-check text-brand-500"></i>
                                     <span>モダンなフロントエンド実装 (React / Next.js)</span>
@@ -217,7 +217,7 @@
         </div>
     </section>
 
-    <!-- About セクション -->
+    <!-- About セクション (py-24=96px, mb-16=64px, gap-12=48px) -->
     <section id="about" class="py-24 bg-white relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
@@ -241,27 +241,27 @@
                         常に最新のWeb標準技術やCDNライブラリ、モダンフレームワークを取り入れ、使う人にとって心地よくストレスのないWeb体験を提供します。
                     </p>
 
-                    <!-- 3つの強み -->
-                    <div class="grid grid-cols-3 gap-4 text-center pt-2">
+                    <!-- 3つの強み (gap-4=16px, p-4=16px, mb-2=8px, mt-2=8px) -->
+                    <div class="grid grid-cols-3 gap-4 text-center pt-4">
                         <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-100">
                             <i class="fa-solid fa-wand-magic-sparkles text-brand-600 text-xl mb-2"></i>
                             <h4 class="font-bold text-slate-800 text-sm">Clean Design</h4>
-                            <p class="text-slate-500 text-xs mt-1">洗練と視認性</p>
+                            <p class="text-slate-500 text-xs mt-2">洗練と視認性</p>
                         </div>
                         <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-100">
                             <i class="fa-solid fa-bolt text-brand-600 text-xl mb-2"></i>
                             <h4 class="font-bold text-slate-800 text-sm">Fast Speed</h4>
-                            <p class="text-slate-500 text-xs mt-1">高速な動作</p>
+                            <p class="text-slate-500 text-xs mt-2">高速な動作</p>
                         </div>
                         <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-100">
                             <i class="fa-solid fa-mobile-screen-button text-brand-600 text-xl mb-2"></i>
                             <h4 class="font-bold text-slate-800 text-sm">Responsive</h4>
-                            <p class="text-slate-500 text-xs mt-1">全デバイス最適化</p>
+                            <p class="text-slate-500 text-xs mt-2">全デバイス最適化</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- 右側：基本情報カード -->
+                <!-- 右側：基本情報カード (p-8=32px, mb-6=24px, space-y-4=16px, pt-4=16px) -->
                 <div data-aos="fade-left" class="bg-slate-50 border border-blue-100/80 rounded-3xl p-8 shadow-sm">
                     <h4 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
                         <i class="fa-regular fa-id-card text-brand-600"></i>
@@ -269,23 +269,23 @@
                     </h4>
                     
                     <dl class="space-y-4 text-sm divide-y divide-slate-200/60">
-                        <div class="pt-3 first:pt-0 flex flex-col sm:flex-row sm:justify-between">
+                        <div class="pt-4 first:pt-0 flex flex-col sm:flex-row sm:justify-between">
                             <dt class="font-semibold text-slate-500">名前</dt>
                             <dd class="font-medium text-slate-900">Sugiyama Ren</dd>
                         </div>
-                        <div class="pt-3 flex flex-col sm:flex-row sm:justify-between">
+                        <div class="pt-4 flex flex-col sm:flex-row sm:justify-between">
                             <dt class="font-semibold text-slate-500">所在地</dt>
                             <dd class="font-medium text-slate-900">日本 / 東京都</dd>
                         </div>
-                        <div class="pt-3 flex flex-col sm:flex-row sm:justify-between">
+                        <div class="pt-4 flex flex-col sm:flex-row sm:justify-between">
                             <dt class="font-semibold text-slate-500">専門領域</dt>
                             <dd class="font-medium text-slate-900">Frontend Development, UI/UX Design</dd>
                         </div>
-                        <div class="pt-3 flex flex-col sm:flex-row sm:justify-between">
+                        <div class="pt-4 flex flex-col sm:flex-row sm:justify-between">
                             <dt class="font-semibold text-slate-500">主要言語・技術</dt>
                             <dd class="font-medium text-slate-900">HTML5 / CSS3 / Tailwind / TypeScript / React</dd>
                         </div>
-                        <div class="pt-3 flex flex-col sm:flex-row sm:justify-between">
+                        <div class="pt-4 flex flex-col sm:flex-row sm:justify-between">
                             <dt class="font-semibold text-slate-500">趣味・関心</dt>
                             <dd class="font-medium text-slate-900">UI探求, オープンソース, カフェ巡り</dd>
                         </div>
@@ -301,7 +301,7 @@
         </div>
     </section>
 
-    <!-- Skills セクション -->
+    <!-- Skills セクション (py-24=96px, gap-8=32px, p-8=32px) -->
     <section id="skills" class="py-24 bg-slate-50 relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
@@ -322,7 +322,7 @@
                     
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>HTML5 / CSS3 / SCSS</span>
                                 <span class="text-brand-600">95%</span>
                             </div>
@@ -332,7 +332,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>JavaScript / TypeScript</span>
                                 <span class="text-brand-600">90%</span>
                             </div>
@@ -342,7 +342,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>React / Next.js / Vue</span>
                                 <span class="text-brand-600">85%</span>
                             </div>
@@ -352,7 +352,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>Tailwind CSS</span>
                                 <span class="text-brand-600">95%</span>
                             </div>
@@ -373,7 +373,7 @@
                     
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>Node.js / Express</span>
                                 <span class="text-brand-600">80%</span>
                             </div>
@@ -383,7 +383,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>Python / FastAPI</span>
                                 <span class="text-brand-600">75%</span>
                             </div>
@@ -393,7 +393,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>SQL / Supabase / Firebase</span>
                                 <span class="text-brand-600">85%</span>
                             </div>
@@ -403,7 +403,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>CDN / Cloudflare / Vercel</span>
                                 <span class="text-brand-600">90%</span>
                             </div>
@@ -424,7 +424,7 @@
                     
                     <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>Figma / UI Design</span>
                                 <span class="text-brand-600">88%</span>
                             </div>
@@ -434,7 +434,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>Git / GitHub</span>
                                 <span class="text-brand-600">92%</span>
                             </div>
@@ -444,7 +444,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>SEO / Web Performance</span>
                                 <span class="text-brand-600">85%</span>
                             </div>
@@ -454,7 +454,7 @@
                         </div>
 
                         <div>
-                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-2">
                                 <span>Docker</span>
                                 <span class="text-brand-600">75%</span>
                             </div>
@@ -467,24 +467,24 @@
 
             </div>
 
-            <!-- CDN & 技術スタックバッジ一覧 -->
+            <!-- CDN & 技術スタックバッジ一覧 (mt-16=64px, p-8=32px, gap-4=16px) -->
             <div class="mt-16 p-8 bg-white border border-blue-100/70 rounded-3xl text-center shadow-xs" data-aos="fade-up">
                 <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-6">Tech Stack & CDN Powered</h4>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-brands fa-html5"></i> HTML5</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-brands fa-css3-alt"></i> Tailwind CSS (CDN)</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-brands fa-js"></i> JavaScript ES6+</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-brands fa-react"></i> React</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-brands fa-font-awesome"></i> FontAwesome CDN</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-solid fa-film"></i> AOS Animation CDN</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-solid fa-keyboard"></i> Typed.js CDN</span>
-                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-1.5"><i class="fa-brands fa-figma"></i> Figma</span>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-brands fa-css3-alt"></i> Tailwind CSS (CDN)</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-brands fa-js"></i> JavaScript ES6+</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-brands fa-react"></i> React</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-brands fa-font-awesome"></i> FontAwesome CDN</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-solid fa-film"></i> AOS Animation CDN</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-solid fa-keyboard"></i> Typed.js CDN</span>
+                    <span class="px-4 py-2 bg-blue-50 text-brand-700 text-xs font-semibold rounded-xl border border-blue-100 flex items-center gap-2"><i class="fa-brands fa-figma"></i> Figma</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects セクション -->
+    <!-- Projects セクション (py-24=96px, mb-12=48px, gap-8=32px) -->
     <section id="projects" class="py-24 bg-white relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
@@ -494,15 +494,15 @@
                 <p class="text-slate-500 text-sm mt-4">これまでに制作したWebサービス、UIデザイン、Webアプリケーションの一部をご紹介します。</p>
             </div>
 
-            <!-- カテゴリフィルター -->
+            <!-- カテゴリフィルター (gap-2=8px, px-6 py-2 = 24px, 8px) -->
             <div class="flex flex-wrap items-center justify-center gap-2 mb-12" data-aos="fade-up">
-                <button class="filter-btn active px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow-md shadow-brand-500/20" data-filter="all">すべて</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-blue-50 hover:text-brand-600 transition-all" data-filter="webapp">Webアプリ</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-blue-50 hover:text-brand-600 transition-all" data-filter="landing">LP・コーポレート</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-blue-50 hover:text-brand-600 transition-all" data-filter="uiux">UI/UX デザイン</button>
+                <button class="filter-btn active px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-600 text-white shadow-md shadow-brand-500/20" data-filter="all">すべて</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-blue-50 hover:text-brand-600 transition-all" data-filter="webapp">Webアプリ</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-blue-50 hover:text-brand-600 transition-all" data-filter="landing">LP・コーポレート</button>
+                <button class="filter-btn px-6 py-2 rounded-full text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-blue-50 hover:text-brand-600 transition-all" data-filter="uiux">UI/UX デザイン</button>
             </div>
 
-            <!-- プロジェクト一覧グリッド -->
+            <!-- プロジェクト一覧グリッド (gap-8=32px) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
                 
                 <!-- Project 1 -->
@@ -513,20 +513,20 @@
                             <i class="fa-solid fa-chart-line text-5xl mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></i>
                             <div class="text-xs font-medium tracking-wider uppercase opacity-80">SaaS Platform</div>
                         </div>
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-xs">Web App</span>
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-4 py-2 rounded-full shadow-xs">Web App</span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">TaskFlow - タスク管理SaaS</h3>
                         <p class="text-slate-500 text-xs mt-2 leading-relaxed">
                             チームの進捗を可視化するモダンなカンバン型タスク管理プラットフォーム。リアルタイム更新と青を基調としたクリーンなダッシュボード。
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">React</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Tailwind CSS</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Firebase</span>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">React</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Tailwind CSS</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Firebase</span>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-2">
                                 詳細を見る <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-700 text-sm">
@@ -544,20 +544,20 @@
                             <i class="fa-solid fa-laptop-code text-5xl mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></i>
                             <div class="text-xs font-medium tracking-wider uppercase opacity-80">Corporate Site</div>
                         </div>
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-xs">LP・コーポレート</span>
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-4 py-2 rounded-full shadow-xs">LP・コーポレート</span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">BlueWave Tech 企業サイト</h3>
                         <p class="text-slate-500 text-xs mt-2 leading-relaxed">
                             AIソリューションを提供するテック企業の公式サイト。信頼感と先進性を表現した青×白のコントラストデザインを採用。
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">HTML5/SCSS</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">JavaScript</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">AOS</span>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">HTML5/SCSS</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">JavaScript</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">AOS</span>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-2">
                                 詳細を見る <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-700 text-sm">
@@ -575,20 +575,20 @@
                             <i class="fa-solid fa-mobile-screen text-5xl mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></i>
                             <div class="text-xs font-medium tracking-wider uppercase opacity-80">FinTech Mobile UI</div>
                         </div>
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-xs">UI/UX</span>
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-4 py-2 rounded-full shadow-xs">UI/UX</span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">PayPure - 家計簿＆送金アプリUI</h3>
                         <p class="text-slate-500 text-xs mt-2 leading-relaxed">
                             複雑になりがちな資産管理をミニマルに整理。直感的なチャートと清潔感あふれるブルーアクセントのUIキットを制作。
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Figma</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Design System</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Prototyping</span>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Figma</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Design System</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Prototyping</span>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-2">
                                 詳細を見る <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-700 text-sm">
@@ -606,20 +606,20 @@
                             <i class="fa-solid fa-cloud-sun text-5xl mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></i>
                             <div class="text-xs font-medium tracking-wider uppercase opacity-80">Weather Web App</div>
                         </div>
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-xs">Web App</span>
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-4 py-2 rounded-full shadow-xs">Web App</span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">SkyCast - 高精度お天気アプリ</h3>
                         <p class="text-slate-500 text-xs mt-2 leading-relaxed">
                             世界各地の気象データをグラフィカルに表示する天気予報アプリ。OpenWeather APIとCDNライブラリを活用した高速レンダリング。
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">JavaScript</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">OpenWeather API</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Chart.js</span>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">JavaScript</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">OpenWeather API</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Chart.js</span>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-2">
                                 詳細を見る <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-700 text-sm">
@@ -637,20 +637,20 @@
                             <i class="fa-solid fa-book-open text-5xl mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></i>
                             <div class="text-xs font-medium tracking-wider uppercase opacity-80">Online Learning LP</div>
                         </div>
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-xs">LP・コーポレート</span>
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-4 py-2 rounded-full shadow-xs">LP・コーポレート</span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">EduPortal - オンライン学習ランディングページ</h3>
                         <p class="text-slate-500 text-xs mt-2 leading-relaxed">
                             受講率向上を狙ったCVR特化型ランディングページ。A/Bテストを繰り返しながら高いコンバージョン率を達成。
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Tailwind CSS</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Alpine.js</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">UI/UX</span>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Tailwind CSS</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Alpine.js</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">UI/UX</span>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-2">
                                 詳細を見る <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-700 text-sm">
@@ -668,20 +668,20 @@
                             <i class="fa-solid fa-palette text-5xl mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></i>
                             <div class="text-xs font-medium tracking-wider uppercase opacity-80">Design System</div>
                         </div>
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-3 py-1 rounded-full shadow-xs">UI/UX</span>
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-700 text-xs font-bold px-4 py-2 rounded-full shadow-xs">UI/UX</span>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Azure Design System - 共通UI基盤</h3>
                         <p class="text-slate-500 text-xs mt-2 leading-relaxed">
                             複数プロダクトで一貫したユーザー体験と開発速度の向上を実現するデザインシステム。青と白を主軸とした包括的なコンポーネント集。
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-4">
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Storybook</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">Figma Tokens</span>
-                            <span class="px-2.5 py-0.5 rounded-md bg-blue-50 text-brand-700 text-[11px] font-semibold">React</span>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Storybook</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">Figma Tokens</span>
+                            <span class="px-4 py-2 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold">React</span>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                            <a href="#projects" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-2">
                                 詳細を見る <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-slate-700 text-sm">
@@ -695,7 +695,7 @@
         </div>
     </section>
 
-    <!-- Experience / Timeline セクション -->
+    <!-- Experience / Timeline セクション (py-24=96px, mb-16=64px, space-y-12=48px) -->
     <section id="experience" class="py-24 bg-slate-50 relative">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
@@ -704,18 +704,18 @@
                 <div class="w-12 h-1 bg-gradient-to-r from-brand-600 to-sky-400 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <!-- タイムライン -->
+            <!-- タイムライン (ml-4=16px, md:ml-32=128px, space-y-12=48px) -->
             <div class="relative border-l-2 border-brand-200 ml-4 md:ml-32 space-y-12">
                 
                 <!-- タイムライン項目 1 -->
                 <div class="relative pl-8 md:pl-10 group" data-aos="fade-up">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-brand-600 group-hover:scale-125 transition-transform"></div>
-                    <span class="hidden md:block absolute -left-32 top-1 text-xs font-bold text-brand-700 w-24 text-right">2024 - 現在</span>
+                    <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-brand-600 group-hover:scale-125 transition-transform"></div>
+                    <span class="hidden md:block absolute -left-32 top-2 text-xs font-bold text-brand-700 w-24 text-right">2024 - 現在</span>
                     
                     <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
-                        <span class="md:hidden inline-block text-xs font-bold text-brand-600 mb-1">2024 - 現在</span>
+                        <span class="md:hidden inline-block text-xs font-bold text-brand-600 mb-2">2024 - 現在</span>
                         <h3 class="text-lg font-bold text-slate-900">リードフロントエンドエンジニア / UIデザイナー</h3>
-                        <p class="text-xs font-semibold text-slate-500 mb-3">フリーランス / 自社サービス開発</p>
+                        <p class="text-xs font-semibold text-slate-500 mb-4">フリーランス / 自社サービス開発</p>
                         <p class="text-slate-600 text-sm leading-relaxed">
                             Webアプリケーションの設計・UIデザインから、TypeScript / React / Tailwind CSSを用いたフロントエンド構築を担当。CDNを活用したアセット最適化やアクセシビリティ向上を推進。
                         </p>
@@ -724,13 +724,13 @@
 
                 <!-- タイムライン項目 2 -->
                 <div class="relative pl-8 md:pl-10 group" data-aos="fade-up">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-brand-500 group-hover:scale-125 transition-transform"></div>
-                    <span class="hidden md:block absolute -left-32 top-1 text-xs font-bold text-brand-700 w-24 text-right">2022 - 2024</span>
+                    <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-brand-500 group-hover:scale-125 transition-transform"></div>
+                    <span class="hidden md:block absolute -left-32 top-2 text-xs font-bold text-brand-700 w-24 text-right">2022 - 2024</span>
                     
                     <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
-                        <span class="md:hidden inline-block text-xs font-bold text-brand-600 mb-1">2022 - 2024</span>
+                        <span class="md:hidden inline-block text-xs font-bold text-brand-600 mb-2">2022 - 2024</span>
                         <h3 class="text-lg font-bold text-slate-900">フロントエンドエンジニア</h3>
-                        <p class="text-xs font-semibold text-slate-500 mb-3">ITソリューション企業</p>
+                        <p class="text-xs font-semibold text-slate-500 mb-4">ITソリューション企業</p>
                         <p class="text-slate-600 text-sm leading-relaxed">
                             クライアントワークとしてコーポレートサイト、ECサイト、業務Webシステムなどの制作に携わる。コンポーネント志向の実装とレスポンシブデザインの標準化に貢献。
                         </p>
@@ -739,13 +739,13 @@
 
                 <!-- タイムライン項目 3 -->
                 <div class="relative pl-8 md:pl-10 group" data-aos="fade-up">
-                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-brand-400 group-hover:scale-125 transition-transform"></div>
-                    <span class="hidden md:block absolute -left-32 top-1 text-xs font-bold text-brand-700 w-24 text-right">2020 - 2022</span>
+                    <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-brand-400 group-hover:scale-125 transition-transform"></div>
+                    <span class="hidden md:block absolute -left-32 top-2 text-xs font-bold text-brand-700 w-24 text-right">2020 - 2022</span>
                     
                     <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
-                        <span class="md:hidden inline-block text-xs font-bold text-brand-600 mb-1">2020 - 2022</span>
+                        <span class="md:hidden inline-block text-xs font-bold text-brand-600 mb-2">2020 - 2022</span>
                         <h3 class="text-lg font-bold text-slate-900">Web制作・プログラミング学習</h3>
-                        <p class="text-xs font-semibold text-slate-500 mb-3">独学 & インターン</p>
+                        <p class="text-xs font-semibold text-slate-500 mb-4">独学 & インターン</p>
                         <p class="text-slate-600 text-sm leading-relaxed">
                             HTML/CSS、JavaScriptの基礎からモダンフレームワークまで幅広く学習。インターンとして小規模なLP制作や受託案件のコーディングを多数経験。
                         </p>
@@ -756,7 +756,7 @@
         </div>
     </section>
 
-    <!-- Contact セクション -->
+    <!-- Contact セクション (py-24=96px, mb-16=64px, gap-12=48px, p-8=32px) -->
     <section id="contact" class="py-24 bg-white relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
@@ -808,28 +808,28 @@
                     </div>
                 </div>
 
-                <!-- お問い合わせフォーム -->
+                <!-- お問い合わせフォーム (p-8=32px, space-y-6=24px, gap-6=24px, py-4=16px) -->
                 <div class="lg:col-span-7" data-aos="fade-left">
                     <form id="contact-form" class="bg-white rounded-3xl p-8 border border-blue-100 shadow-lg shadow-blue-50/50 space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">お名前 <span class="text-brand-600">*</span></label>
-                                <input type="text" id="name" name="name" required placeholder="山田 太郎" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white">
+                                <input type="text" id="name" name="name" required placeholder="山田 太郎" class="w-full px-4 py-4 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white">
                             </div>
                             <div>
                                 <label for="email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">メールアドレス <span class="text-brand-600">*</span></label>
-                                <input type="email" id="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white">
+                                <input type="email" id="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-4 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white">
                             </div>
                         </div>
 
                         <div>
                             <label for="subject" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">件名 <span class="text-brand-600">*</span></label>
-                            <input type="text" id="subject" name="subject" required placeholder="Webサイト制作のお見積もりについて" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white">
+                            <input type="text" id="subject" name="subject" required placeholder="Webサイト制作のお見積もりについて" class="w-full px-4 py-4 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white">
                         </div>
 
                         <div>
                             <label for="message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">メッセージ内容 <span class="text-brand-600">*</span></label>
-                            <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容をご記入ください..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white resize-none"></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="お問い合わせ内容をご記入ください..." class="w-full px-4 py-4 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all text-sm bg-slate-50/50 focus:bg-white resize-none"></textarea>
                         </div>
 
                         <button type="submit" id="submit-btn" class="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-bold shadow-md shadow-brand-500/25 hover:shadow-lg hover:shadow-brand-500/30 transition-all flex items-center justify-center gap-2">
@@ -845,11 +845,11 @@
         </div>
     </section>
 
-    <!-- フッター -->
+    <!-- フッター (py-12=48px, px-6=24px, gap-6=24px, gap-4=16px) -->
     <footer class="bg-navy-900 text-slate-400 py-12 border-t border-navy-800">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-4">
                 <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-sky-400 text-white flex items-center justify-center font-bold text-xs">
                     <i class="fa-solid fa-code"></i>
                 </span>
@@ -870,7 +870,7 @@
         </div>
     </footer>
 
-    <!-- トップに戻るフローティングボタン -->
+    <!-- トップに戻るフローティングボタン (bottom-6=24px, right-6=24px, w-12 h-12=48px) -->
     <a href="#hero" id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-white text-brand-600 border border-brand-200 rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-brand-600 hover:text-white hover:scale-110 z-40">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
