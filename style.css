@@ -1,0 +1,52 @@
+/* Custom Styles for Portfolio (Blue & White Theme) */
+
+/* スムーススクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+    background: #93c5fd;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* ナビゲーションバーのスクロール時シャドウ演出 */
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.08);
+}
+
+/* カードの微細な浮遊アニメーション */
+.card-hover-effect {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover-effect:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+}
+
+/* Typed.js のカーソルデザイン調整 */
+.typed-cursor {
+    color: #2563eb;
+    font-weight: 300;
+}
+
+/* フィルター時のアニメーション */
+.project-card {
+    transition: all 0.4s ease;
+}
+.project-card.hidden-card {
+    opacity: 0;
+    transform: scale(0.9);
+    display: none;
+}
