@@ -26,7 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. モバイルメニューの開閉制御
+    // 3. ヒーローセクションのインタラクティブ・パーティクル背景 (Canvas)
+    initHeroParticles();
+
+    // 4. 3Dチルト効果の初期化 (Vanilla-Tilt)
+    initTiltEffect();
+
+    // 5. モバイルメニューの開閉制御
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
@@ -55,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. スクロール時のヘッダースタイルと「トップに戻る」ボタン
+    // 6. スクロール時のヘッダースタイルと「トップに戻る」ボタン
     const header = document.getElementById('header');
     const backToTopBtn = document.getElementById('back-to-top');
 
@@ -75,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 5. 制作実績 (Projects) のカテゴリフィルター
+    // 7. 制作実績 (Projects) のカテゴリフィルター
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
@@ -112,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. お問い合わせフォーム送信シミュレーション (青と白の紙吹雪エフェクト付き)
+    // 8. お問い合わせフォーム送信シミュレーション (青と白の紙吹雪エフェクト付き)
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const formFeedback = document.getElementById('form-feedback');
@@ -143,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 成功フィードバック表示
                 formFeedback.className = 'p-4 rounded-xl text-center text-sm font-semibold bg-blue-50 text-brand-700 border border-blue-200 block';
                 formFeedback.innerHTML = `
-                    <div class="flex items-center justify-center gap-2 mb-1">
+                    <div class="flex items-center justify-center gap-2 mb-2">
                         <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
                         <span class="font-bold">送信が完了しました！</span>
                     </div>
@@ -159,3 +165,145 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/**
+ * ヒーローセクション用インタラクティブCanvasパーティクル
+ */
+function initHeroParticles() {
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = canvas.parentElement.offsetWidth);
+    let height = (canvas.height = canvas.parentElement.offsetHeight);
+
+    const particles = [];
+    const particleCount = Math.min(Math.floor((width * height) / 16000), 55);
+
+    const mouse = {
+        x: null,
+        y: null,
+        radius: 120
+    };
+
+    window.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        if (
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom
+        ) {
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        } else {
+            mouse.x = null;
+            mouse.y = null;
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (!canvas.parentElement) return;
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+    });
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.size = Math.random() * 2.5 + 1.5;
+            this.speedX = (Math.random() - 0.5) * 0.8;
+            this.speedY = (Math.random() - 0.5) * 0.8;
+            // 青と水色と白のトーン
+            const colors = [
+                'rgba(59, 130, 246, 0.45)', // blue-500
+                'rgba(14, 165, 233, 0.45)', // sky-500
+                'rgba(96, 165, 250, 0.5)',  // brand-400
+                'rgba(255, 255, 255, 0.8)'  // white
+            ];
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (this.x < 0 || this.x > width) this.speedX *= -1;
+            if (this.y < 0 || this.y > height) this.speedY *= -1;
+
+            // マウスとの反発・連動
+            if (mouse.x !== null && mouse.y !== null) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < mouse.radius) {
+                    const force = (mouse.radius - distance) / mouse.radius;
+                    const directionX = (dx / distance) * force * 2;
+                    const directionY = (dy / distance) * force * 2;
+                    this.x -= directionX;
+                    this.y -= directionY;
+                }
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+
+    function connectLines() {
+        for (let a = 0; a < particles.length; a++) {
+            for (let b = a + 1; b < particles.length; b++) {
+                const dx = particles[a].x - particles[b].x;
+                const dy = particles[a].y - particles[b].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 110) {
+                    const opacity = (1 - distance / 110) * 0.25;
+                    ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[a].x, particles[a].y);
+                    ctx.lineTo(particles[b].x, particles[b].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        connectLines();
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+/**
+ * 3Dチルト効果の初期化
+ */
+function initTiltEffect() {
+    if (typeof VanillaTilt !== 'undefined') {
+        const tiltElements = document.querySelectorAll('[data-tilt]');
+        VanillaTilt.init(tiltElements, {
+            max: 10,
+            speed: 400,
+            glare: true,
+            'max-glare': 0.25,
+            scale: 1.02
+        });
+    }
+}

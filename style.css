@@ -26,7 +26,83 @@ header.scrolled {
     box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.08);
 }
 
-/* カードの微細な浮遊アニメーション */
+/* 浮遊アニメーション (Floating Badges) */
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(1.5deg);
+    }
+}
+
+@keyframes floatFast {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-1.5deg);
+    }
+}
+
+@keyframes floatReverse {
+    0%, 100% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(4px) rotate(-1deg);
+    }
+}
+
+.animate-float-1 {
+    animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+    animation: floatFast 4s ease-in-out infinite 0.5s;
+}
+
+.animate-float-3 {
+    animation: floatReverse 6s ease-in-out infinite 1s;
+}
+
+/* テキストの滑らかなグラデーションアニメーション */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient-text {
+    background: linear-gradient(270deg, #1d4ed8, #0284c7, #38bdf8, #2563eb);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite;
+}
+
+/* スクロールダウンマウスアニメーション */
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+.animate-scroll-wheel {
+    animation: scrollWheel 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
 .card-hover-effect {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
